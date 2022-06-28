@@ -1,15 +1,15 @@
 const SEO = {
-  defaultTitle: 'Sushi',
-  titleTemplate: '%s | Sushi',
-  description: 'Swap, yield, lend, borrow, leverage, limit, launch all on one community driven ecosystem',
+  defaultTitle: 'Iron',
+  titleTemplate: '%s | Iron',
+  description: 'Iron, yield, leverage, limit, launch all on one community driven ecosystem',
   openGraph: {
     type: 'website',
-    url: 'https://app.sushi.com/',
-    site_name: 'Sushi',
+    url: 'https://app.ironproject.org',
+    site_name: 'Iron',
   },
   twitter: {
-    handle: '@SushiSwap',
-    site: '@SushiSwap',
+    handle: '@ironprojectorg',
+    site: '@ironprojectorg',
     cardType: 'summary_large_image',
   },
 }

@@ -25,17 +25,6 @@ export const SUPPORTED_NETWORKS: Record<
     blockExplorerUrls: string[]
   }
 > = {
-  [ChainId.ETHEREUM]: {
-    chainId: '0x1',
-    chainName: 'Ethereum',
-    nativeCurrency: {
-      name: 'Ethereum',
-      symbol: 'ETH',
-      decimals: 18,
-    },
-    rpcUrls: ['https://mainnet.infura.io/v3'],
-    blockExplorerUrls: ['https://etherscan.com'],
-  },
   [ChainId.ROPSTEN]: {
     chainId: '0x3',
     chainName: 'Ropsten',
@@ -124,17 +113,7 @@ export const SUPPORTED_NETWORKS: Record<
     rpcUrls: ['https://http-mainnet.hecochain.com'],
     blockExplorerUrls: ['https://hecoinfo.com'],
   },
-  [ChainId.XDAI]: {
-    chainId: '0x64',
-    chainName: 'xDai',
-    nativeCurrency: {
-      name: 'xDai Token',
-      symbol: 'xDai',
-      decimals: 18,
-    },
-    rpcUrls: ['https://rpc.xdaichain.com'],
-    blockExplorerUrls: ['https://blockscout.com/poa/xdai'],
-  },
+
   [ChainId.HARMONY]: {
     chainId: '0x63564C40',
     chainName: 'Harmony',
@@ -173,17 +152,6 @@ export const SUPPORTED_NETWORKS: Record<
     rpcUrls: ['https://exchainrpc.okex.org'],
     blockExplorerUrls: ['https://www.oklink.com/okexchain'],
   },
-  [ChainId.ARBITRUM]: {
-    chainId: '0xA4B1',
-    chainName: 'Arbitrum',
-    nativeCurrency: {
-      name: 'Ethereum',
-      symbol: 'ETH',
-      decimals: 18,
-    },
-    rpcUrls: ['https://arb1.arbitrum.io/rpc'],
-    blockExplorerUrls: ['https://arbiscan.io'],
-  },
   [ChainId.CELO]: {
     chainId: '0xA4EC',
     chainName: 'Celo',
@@ -194,61 +162,6 @@ export const SUPPORTED_NETWORKS: Record<
     },
     rpcUrls: ['https://forno.celo.org'],
     blockExplorerUrls: ['https://explorer.celo.org'],
-  },
-  [ChainId.MOONRIVER]: {
-    chainId: '0x505',
-    chainName: 'Moonriver',
-    nativeCurrency: {
-      name: 'Moonriver',
-      symbol: 'MOVR',
-      decimals: 18,
-    },
-    rpcUrls: ['https://rpc.moonriver.moonbeam.network'],
-    blockExplorerUrls: ['https://moonriver.moonscan.io'],
-  },
-  [ChainId.FUSE]: {
-    chainId: '0x7A',
-    chainName: 'Fuse',
-    nativeCurrency: {
-      name: 'Fuse',
-      symbol: 'FUSE',
-      decimals: 18,
-    },
-    rpcUrls: ['https://rpc.fuse.io'],
-    blockExplorerUrls: ['https://explorer.fuse.io'],
-  },
-  [ChainId.TELOS]: {
-    chainId: '0x28',
-    chainName: 'Telos',
-    nativeCurrency: {
-      name: 'Telos',
-      symbol: 'TLOS',
-      decimals: 18,
-    },
-    rpcUrls: ['https://mainnet.telos.net/evm'],
-    blockExplorerUrls: ['https://rpc1.us.telos.net/v2/explore'],
-  },
-  [ChainId.PALM]: {
-    chainId: '0x2A15C308D',
-    chainName: 'Palm',
-    nativeCurrency: {
-      name: 'Palm',
-      symbol: 'PALM',
-      decimals: 18,
-    },
-    rpcUrls: ['https://palm-mainnet.infura.io/v3/da5fbfafcca14b109e2665290681e267'],
-    blockExplorerUrls: ['https://explorer.palm.io'],
-  },
-  [ChainId.MOONBEAM]: {
-    chainId: '0x504',
-    chainName: 'Moonbeam',
-    nativeCurrency: {
-      name: 'Glimmer',
-      symbol: 'GLMR',
-      decimals: 18,
-    },
-    rpcUrls: ['https://rpc.api.moonbeam.network'],
-    blockExplorerUrls: ['https://moonbeam.moonscan.io'],
   },
 }
 
@@ -266,22 +179,14 @@ const NetworkModal: FC = () => {
         <HeadlessUiModal.Header header={i18n._(t`Select a network`)} onClose={toggleNetworkModal} />
         <div className="grid grid-flow-row-dense grid-cols-1 gap-4 overflow-y-auto md:grid-cols-2">
           {[
-            ChainId.ETHEREUM,
             ChainId.MATIC,
-            ChainId.ARBITRUM,
             ChainId.AVALANCHE,
-            ChainId.MOONBEAM,
-            ChainId.MOONRIVER,
             ChainId.FANTOM,
             ChainId.BSC,
-            ChainId.XDAI,
             ChainId.HARMONY,
-            ChainId.TELOS,
             ChainId.CELO,
-            ChainId.FUSE,
             ChainId.OKEX,
             ChainId.HECO,
-            ChainId.PALM,
           ]
             .sort((key) => (chainId === key ? -1 : 0))
             .map((key: number, i: number) => {
