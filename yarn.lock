@@ -2697,10 +2697,15 @@
     "@sushiswap/trident" "1.0.0-canary.36"
     tiny-invariant "^1.1.0"
 
-"@sushiswap/trident@1.0.0-canary.36", "@sushiswap/trident@^1.0.0-canary.36":
+"@sushiswap/trident@1.0.0-canary.36":
   version "1.0.0-canary.36"
   resolved "https://registry.yarnpkg.com/@sushiswap/trident/-/trident-1.0.0-canary.36.tgz#b2af7b8fce72162fd2116375c159f3d5c84eaf97"
   integrity sha512-PWka8EzA7vxdaEFI8/1833nVgagnEsP59+A4tuKuzTmnIdgZb+t9qeZ8ZajooLa2aePDOPpthORCe4owgSM84w==
+
+"@sushiswap/trident@^1.0.0-canary.52":
+  version "1.0.0-canary.52"
+  resolved "https://registry.yarnpkg.com/@sushiswap/trident/-/trident-1.0.0-canary.52.tgz#c07fecb0fa0d6f67c4f427fd0f003569a5180860"
+  integrity sha512-6yjKn3tdp1is6Y69cZfGY1GxwGjZxhMDDKWJwFUi4h/8R0y1SR6a61B0Qdda2DsVf/NfP4mY1jpQ6wsyrH1GGQ==
 
 "@szmarczak/http-timer@^4.0.5":
   version "4.0.6"
